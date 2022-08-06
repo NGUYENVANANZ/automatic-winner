@@ -3,33 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+<style>
+  td{
+    border: 1px solid black;
+  }
+  body{
+    background: orange;
+  }
+  th{
+    background: orange;
+  }
+  tr:nth-child(even) td:nth-child(odd){
+    background: black;
+  }td:nth-child(even){
+    background: white;
+     }
+  tr:nth-child(odd) td:nth-child(even){
+    background: black;
+  }td:nth-child(odd){
+     background: white;
+   }
+  td {
+    width: 60px;
+    height: 60px
+  }
+  table{
+    border-spacing: 0;
+  }
+</style>
 </head>
 <body>
-<table border="1" style="width: 200px; height: 200px">
+<table>
   <tr>
-    <td></td>
-    <td>1</td>
-    <td>2</td>
-    <td>3</td>
-    <td>4</td>
-    <td>5</td>
-    <td>6</td>
-    <td>7</td>
-    <td>8</td>
+    <th></th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7</th>
+    <th>8</th>
   </tr>
   <tr>
-    <td>A</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>B</td>
+    <th>A</th>
     <td></td>
     <td></td>
     <td></td>
@@ -40,7 +57,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>C</td>
+    <th>B</th>
     <td></td>
     <td></td>
     <td></td>
@@ -51,7 +68,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>D</td>
+    <th>C</th>
     <td></td>
     <td></td>
     <td></td>
@@ -62,7 +79,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>E</td>
+    <th>D</th>
     <td></td>
     <td></td>
     <td></td>
@@ -73,7 +90,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>F</td>
+    <th>E</th>
     <td></td>
     <td></td>
     <td></td>
@@ -84,7 +101,7 @@
     <td></td>
   </tr>
   <tr>
-    <td>G</td>
+    <th>F</th>
     <td></td>
     <td></td>
     <td></td>
@@ -95,7 +112,18 @@
     <td></td>
   </tr>
   <tr>
-    <td>H</td>
+    <th>G</th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th>H</th>
     <td></td>
     <td></td>
     <td></td>
