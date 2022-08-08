@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="so_1">
+<input type="number" id="so_2">
+<button onclick="Add()"> Cộng</button>
+<button onclick=" Sub()">Trừ</button>
+<h2> Kết Quả</h2>
+<p id="result" > kết quả là</p>
+
+<script>
+  function Add() {
+    let so_1 = document.getElementById('so_1').value
+    let so_2 = document.getElementById('so_2').value
+    let result = parseInt(so_1)  + parseInt(so_2)
+    document.getElementById('result').innerHTML=result
+  }
+  function Sub() {
+    let so_1 = document.getElementById('so_1').value
+    let so_2 = document.getElementById('so_2').value
+    let result = parseInt(so_1)  - parseInt(so_2)
+    document.getElementById('result').innerHTML=result
+  }
+
+</script>
+</body>
+</html>
