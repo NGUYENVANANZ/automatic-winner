@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let answer = prompt('tên đăng nhập')
+  if (answer == 'Admin') {
+      let pass = prompt('mật khẩu')
+      if (pass == 'TheMaster') {
+          alert('Welcome.')
+      } else if (pass == null) {
+          alert('Canceled')
+      } else{
+          alert('Wrong password')
+      }
+  } else if (answer == null){
+      alert('cancel')
+  } else {
+      alert('I don’t know you')
+  }
+</script>
+</body>
+</html>
