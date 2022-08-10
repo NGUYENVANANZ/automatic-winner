@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4</title>
+</head>
+<body>
+<p> Cạnh a</p>
+<input type="text" id="aBang">
+<p> Cạnh b</p>
+<input type="text" id="bBang">
+<p> Cạnh c</p>
+<input type="text" id="cBang">
+<br>
+<br>
+<button onclick="xettamgiac()"> Có phải tam giác không</button>
+<script>
+  function xettamgiac(){
+    let a = parseInt(document.getElementById('aBang').value)
+    let b = parseInt(document.getElementById('bBang').value)
+    let c = parseInt(document.getElementById('cBang').value)
+     if (a>0 && b>0 && c>0){
+         if (a + b > c){
+            if (b + c > a){
+                if (a + c > b){
+                    alert('là tam giác')
+                }else {
+                    alert('ko phải')
+                }
+            }else {
+                alert('sai rồi')
+            }
+         }else {
+             alert('sai! sai! sai!')
+         }
+     }else {
+         alert('sai ngay từ đầu')
+     }
+  }
+</script>
+
+</body>
+</html>

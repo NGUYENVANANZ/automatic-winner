@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Điểm giữa kì</p>
+<input id="diemgiuaki" type="text">
+<p> Điểm cuối kì</p>
+<input id="diemcuoiki" type="text">
+<button onclick="xeploai()">Xếp Loại</button>
+
+<script>
+    function xeploai(){
+        let a = parseInt(document.getElementById('diemgiuaki').value)
+        let b = parseInt(document.getElementById('diemcuoiki').value)
+        let c = ((a+b)/2) > 8 ? alert('học sinh giỏi') :
+        ((a+b)/2 >= 6.5 ) ? alert('học sinh khá'):
+            ((a+b)/2 >= 3) ? alert('học sinh trung bình'):
+                alert('học sinh yếu')
+
+
+    }
+</script>
+
+</body>
+</html>

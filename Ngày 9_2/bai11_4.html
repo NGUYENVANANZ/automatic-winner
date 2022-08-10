@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> Nhập a</p>
+<input type="text" id="so_1">
+<p> Nhập b</p>
+<input type="text" id="so_2">
+<p> Nhập c</p>
+<input type="text" id="so_3">
+<br>
+<br>
+<button onclick="solonnhat()"> Số Lớn Nhất Là </button>
+<p id="result" ></p>
+<script>
+  function solonnhat() {
+    let a = document.getElementById('so_1').value
+    let b = document.getElementById('so_2').value
+    let c = document.getElementById('so_3').value
+    if (a>b){
+      if (a>c){
+        document.getElementById('result').innerHTML = a
+      } else {
+        document.getElementById('result').innerHTML = c
+      }
+    } else if (b>c){
+      document.getElementById('result').innerHTML = b
+    } else {
+      document.getElementById('result').innerHTML = c
+    }
+            }
+
+</script>
+</body>
+</html>

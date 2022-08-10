@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="songuyen" type="text">
+<button onclick="sosanh()">Kết Quả</button>
+<p id="ketqua" ></p>
+<script>
+    function sosanh(){
+  let a = document.getElementById('songuyen').value
+  if (a>0){
+    document.getElementById('ketqua').innerHTML = 'Là số lớn hơn 0'
+  } else {
+      document.getElementById('ketqua').innerHTML= 'Là số nhỏ hơn 0 '
+  }
+    }
+</script>
+
+</body>
+</html>

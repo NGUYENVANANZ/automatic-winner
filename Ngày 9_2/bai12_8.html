@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> Tuổi của bạn:</p>
+<input id="tuoi" type="text">
+<br>
+<br>
+<button onclick="Xet()"> Có phải là tuổi không </button>
+<p id="xettuoi"></p>
+<script>
+    function Xet() {
+        let x = parseInt(document.getElementById('tuoi').value)
+        if (0 < x){
+            if (x < 120){
+                alert('hello')
+            } else {
+                alert('mày đếch phải con người !!')
+            }
+        }
+        else {
+                alert('mày đếch phải con người !!')
+        }
+
+    }
+</script>
+
+</body>
+</html>

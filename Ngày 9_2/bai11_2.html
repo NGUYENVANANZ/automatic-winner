@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> Tuổi của bạn:</p>
+<input id="tuoi" type="text">
+<br>
+<br>
+<button onclick="Xet()"> Xét Tuyển </button>
+<p id="ketquaxettuyen"></p>
+<script>
+  function Xet(){
+    let x = document.getElementById('tuoi').value
+    if (x >= 15){
+      result = 'bạn đủ đều kiện nhập học lớp 10'
+    } else {
+      result = 'bạn không đủ đều kiện nhập học lớp 10'
+    }
+    document.getElementById('ketquaxettuyen').innerHTML = result
+  }
+</script>
+</body>
+</html>

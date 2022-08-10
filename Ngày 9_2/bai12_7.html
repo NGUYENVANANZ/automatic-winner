@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> Nhập a</p>
+<input type="text" id="aBang">
+<p> Nhập b</p>
+<input type="text" id="bBang">
+<p> Nhập c</p>
+<input type="text" id="cBang">
+<br>
+<br>
+<button onclick="doi()"> Tính X
+</button>
+<script>
+    function doi(){
+        let a = parseInt(document.getElementById('aBang').value)
+        let b = parseInt(document.getElementById('bBang').value)
+        let c = parseInt(document.getElementById('cBang').value)
+        let d = parseInt(Math.pow(b,2)-4*a*c)
+        if (d<0){
+            alert('phương trình vô nghiệm')
+        } else if (d>0){
+            alert('phương trình có 2 nghiệm x1='+ (-b+d)/2*a + 'và x2='+ (-b-d)/2*a)
+        } else  {
+            alert('phương trình có nghiệm kép x='+ -b/2*a )
+                                }
+    }
+</script>
+
+</body>
+</html>

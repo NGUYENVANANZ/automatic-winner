@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> Nhập số a</p>
+<input type="text" id="so_a">
+<br>
+<br>
+<p> Nhập số b</p>
+<input type="text" id="so_b">
+<br>
+<br>
+<button onclick="dapan()" > Kết Quả </button>
+<p id="result"></p>
+<script>
+  function dapan() {
+    let a = document.getElementById('so_a').value
+    let b = document.getElementById('so_b').value
+    let c = a % b
+    if (c == 0) {
+      result = ' a chia hết cho b'
+    } else {
+      result = ' a không chia hết cho b'
+    }
+    document.getElementById('result').innerHTML = result
+  }
+</script>
+
+</body>
+</html>

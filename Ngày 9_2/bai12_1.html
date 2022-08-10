@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> Độ C</p>
+<input type="text" id="doC">
+<button onclick="doi()"> Đổi
+</button>
+<script>
+    function doi(){
+        let a= parseInt(document.getElementById('doC').value)
+        let b= a  *  9/5 + 32
+        alert(b+'độ F')
+    }
+</script>
+
+</body>
+</html>

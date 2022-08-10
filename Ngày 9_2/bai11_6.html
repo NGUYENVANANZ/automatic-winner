@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Doanh số bán hàng</p>
+<input type="text" id="doanhso"> VNĐ
+<p> Tiền hoa hồng:</p>
+<p id="tienhoahong"> </p>
+<br>
+<button onclick="tien()" >Tỉ lệ</button>
+<script>
+  function tien(){
+    let a = parseInt(document.getElementById('doanhso').value)
+    let b = (a/100)*5
+    document.getElementById('tienhoahong').innerHTML = b + 'VNĐ'
+  }
+</script>
+
+
+
+</body>
+</html>

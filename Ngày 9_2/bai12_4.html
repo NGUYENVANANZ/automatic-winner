@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> Chiều dài</p>
+<input type="text" id="chieudai">
+<p> Chiều rộng</p>
+<input type="text" id="chieurong">
+<br>
+<br>
+<button onclick="doi()"> Diện tích
+</button>
+<script>
+  function doi(){
+    let a= parseInt(document.getElementById('chieudai').value)
+    let b= parseInt(document.getElementById('chieurong').value)
+    let c= a*b
+    alert(c+'m^2')
+  }
+</script>
+</body>
+</html>
