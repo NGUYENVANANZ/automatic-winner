@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+   table, tr, th {
+     width: 100%;
+     border: 1px double black;
+   }
+   body {
+     width: 300px;
+     text-align: center;
+     margin: 10px auto;
+   }
+   p#bieu_thuc{
+     margin: 0 0 0 10px;
+     text-align: left;
+     height: 20px;
+   }
+
+   p#ket_qua {
+     height: 20px;
+     margin: 0 10px 0 0;
+     text-align: right;
+   }
+   button{
+     width: 100%;
+     height: 100%;
+   }
+   td {
+     border: 1px double black;
+     width: 25%;
+     height: 50px;
+   }
+  </style>
+</head>
+<body>
+<table>
+  <tr class="man_hinh">
+    <td colspan="4">
+      <p id="bieu_thuc" ></p>
+      <p id="ket_qua"></p>
+    </td>
+  </tr>
+  <tr>
+    <td onclick="Nhannut('1')"><button>1</button></td>
+    <td onclick="Nhannut('2')"><button>2</button></td>
+    <td onclick="Nhannut('3')"><button>3</button></td>
+    <td onclick="Nhannut('+')"><button>+</button></td>
+  </tr>
+  <tr>
+    <td onclick="Nhannut('4')"><button>4</button></td>
+    <td onclick="Nhannut('5')"><button>5</button></td>
+    <td onclick="Nhannut('6')"><button>6</button></td>
+    <td onclick="Nhannut('-')"><button>-</button></td>
+  </tr >
+  <tr>
+    <td onclick="Nhannut('7')"><button>7</button></td>
+    <td onclick="Nhannut('8')"><button>8</button></td>
+    <td onclick="Nhannut('9')"><button>9</button></td>
+    <td onclick="Nhannut('*')"><button>*</button></td>
+  </tr>
+  <tr >
+    <td onclick="Nhannut('C')"><button>C</button></td>
+    <td onclick="Nhannut('0')"><button>0</button></td>
+    <td onclick="Nhannut('=')"><button>=</button></td>
+    <td onclick="Nhannut('/')"><button>/</button></td>
+  </tr>
+</table>
+
+<script src="bai5.js" ></script>
+</body>
+</html>
