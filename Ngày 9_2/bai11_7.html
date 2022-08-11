@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let phibatbuoc = 25000
+  let tien
+  let thoigiangoi = parseInt(prompt('số phút'))
+  if (thoigiangoi <50){
+      tien = 600*thoigiangoi + phibatbuoc
+  } else if ( thoigiangoi < 200 ){
+    tien = 400*thoigiangoi + phibatbuoc
+  } else {
+    tien = 200*thoigiangoi+ phibatbuoc
+  }
+  alert('số tiền cước của bạn là:'+ tien)
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let dien = parseInt(prompt('số điện?'))
+    let bac
+    let giadien
+
+     if ( dien<50 )
+        bac = 1
+    else if ( dien <100)
+        bac = 2
+    else if ( dien<200)
+        bac = 3
+    else if ( dien<300)
+        bac = 4
+    else if ( dien<400)
+        bac = 5
+    else
+        bac = 6
+
+    switch (bac) {
+        case 1:
+            giadien = dien * 1678
+            break
+        case 2:
+            giadien = dien * 1734
+            break
+        case 3:
+            giadien = dien * 2014
+            break
+        case 4:
+            giadien = dien * 2536
+            break
+        case 5:
+            giadien = dien * 2843
+            break
+        case 6:
+            giadien = 2927
+            break
+    }
+    alert('số tiền bạn phải trả là'+ giadien)
+
+</script>
+
+</body>
+</html>

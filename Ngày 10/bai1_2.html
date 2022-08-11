@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập 1 số x bất kì</p>
+<input id="so" type="text">
+<button onclick="Tong()" >Tổng</button>
+<p> Tổng các phần tử từ 1 đến x :</p>
+<p id="result"></p>
+<script>
+    function Tong()  {
+        let so =parseInt(document.getElementById('so').value)
+        let tong =0;
+        for (let i=0;i<=so;i++ ){
+            tong +=i
+        }
+document.getElementById('result').innerHTML= tong
+    }
+</script>
+
+</body>
+</html>
