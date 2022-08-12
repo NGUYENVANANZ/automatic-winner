@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="anh1" src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part1x1.jpg" onclick="anh1()" height="50px" width="200px">
+<br>
+<img id="anh2" src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part2x1.jpg" onclick="anh2()" height="50px" width="200px">
+<br>
+<img id="anh3" src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part3x1.jpg" onclick="anh3()" height="50px" width="200px">
+<br>
+<img id="anh4" src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part4x1.jpg" onclick="anh4()" height="50px" width="200px">
+<br>
+<img id="anh5" src="https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part5x1.jpg" onclick="anh5()" height="50px" width="200px">
+<br>
+<button onclick="Kiemtra()">Kiểm Tra Kết Quả</button>
+<script>
+    let cont1 = 1
+    let cont2 = 1
+    let cont3 = 1
+    let cont4 = 1
+    let cont5 = 1
+    function anh1() {
+        if (cont1 === 1){
+            document.getElementById('anh1').src = "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part1x1.jpg"
+            cont1++
+        } else if (cont1 === 2){
+            document.getElementById('anh1').src =" https://demo.codegym.vn/8/puzzlegame/img/monkey_part1x1.jpg"
+            cont1++
+        } else if( cont1 === 3){
+            document.getElementById('anh1').src =" https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part1x1.jpg"
+            cont1 = 1
+        }
+    }
+    function anh2() {
+        if (cont2 === 1){
+            document.getElementById('anh2').src = "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part2x1.jpg"
+            cont2++
+        } else if (cont2 === 2){
+            document.getElementById('anh2').src =" https://demo.codegym.vn/8/puzzlegame/img/monkey_part2x1.jpg"
+            cont2++
+        } else if( cont2 === 3){
+            document.getElementById('anh2').src =" https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part2x1.jpg"
+            cont2 = 1
+        }
+    }
+    function anh3() {
+        if (cont3 === 1){
+            document.getElementById('anh3').src = "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part3x1.jpg"
+            cont3++
+        } else if (cont3 === 2){
+            document.getElementById('anh3').src =" https://demo.codegym.vn/8/puzzlegame/img/monkey_part3x1.jpg"
+            cont3++
+        } else if( cont3 === 3){
+            document.getElementById('anh3').src =" https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part3x1.jpg"
+            cont3 = 1
+        }
+
+    }
+    function anh4() {
+        if (cont4 === 1){
+            document.getElementById('anh4').src = "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part4x1.jpg"
+            cont4++
+        } else if (cont4 === 2){
+            document.getElementById('anh4').src =" https://demo.codegym.vn/8/puzzlegame/img/monkey_part4x1.jpg"
+            cont4++
+        } else if( cont4 === 3){
+            document.getElementById('anh4').src =" https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part4x1.jpg"
+            cont4 = 1
+        }
+    }
+    function anh5() {
+        if (cont5 === 1){
+            document.getElementById('anh5').src = "https://demo.codegym.vn/8/puzzlegame/img/funny-cat1_part5x1.jpg"
+            cont5++
+        } else if (cont5 === 2){
+            document.getElementById('anh5').src =" https://demo.codegym.vn/8/puzzlegame/img/monkey_part5x1.jpg"
+            cont5++
+        } else if( cont5 === 3){
+            document.getElementById('anh5').src =" https://demo.codegym.vn/8/puzzlegame/img/panda_swap_part5x1.jpg"
+            cont5 = 1
+        }
+    }
+    function Kiemtra(){
+       if (cont1 === cont2) {
+           if (cont2 === cont3) {
+               if (cont3 === cont4) {
+                   if (cont4 === cont5) {
+                       alert('player win')
+                   } else {
+                       alert('còn non và xanh lắm')
+                   }
+               }else {
+                   alert('còn non và xanh lắm')
+               }
+           }else {
+               alert('còn non và xanh lắm')
+           }
+       }else {
+           alert('còn non và xanh lắm')
+       }
+    }
+</script>
+
+</body>
+</html>
