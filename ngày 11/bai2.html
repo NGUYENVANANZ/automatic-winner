@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let so =parseInt(prompt('N số nguyên tố đầu tiên'))
+    let count = 0
+    let countST = 0
+    for(let i = 2; i < 1000 ; i++){
+        if ( countST < so) {
+            for (let j = 1; j <= i; j++) {
+                if (i % j === 0) {
+                    count += 1
+                }
+            }
+            if (count === 2) {
+                document.write(i + "<br>")
+                countST++
+            }
+            count = 0
+        } else {
+        break
+        }
+    }
+</script>
+</body>
+</html>

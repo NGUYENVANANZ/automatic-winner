@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a=0;
+  let b;
+  let sum=1;
+  let count = 0
+  while ( count <= 20){
+    b=a;
+    a=sum;
+    sum= a+b;
+    count++;
+    if (sum% 5==0){
+      document.write(sum);
+      break
+    }
+  }
+
+</script>
+</body>
+</html>
