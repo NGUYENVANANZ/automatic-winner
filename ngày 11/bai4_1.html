@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a=0;
+  let b;
+  let sum=1;
+  let count = 2;
+  let soluong = parseInt(prompt('N số fibonaci đầu tiên'))
+  document.write(a+sum+"<br>");
+  while ( count <= soluong){
+    b=a;
+    a=sum;
+    sum= a+b;
+    document.write(sum+"<br>");
+    count++;
+  }
+
+</script>
+</body>
+</html>
