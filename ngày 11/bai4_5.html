@@ -5,6 +5,17 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let sono = parseInt(prompt('số tiền nợ'));
+    let laisuat =parseInt(prompt('lãi'));
+    let sothang = parseInt(prompt('trả trong N tháng'));
+    let count = 1
+    while (count <= sothang){
+        sono = (sono*laisuat/100) + sono;
+        count++
+    }
+    document.write('số tiền phải trả trong '+ sothang + ' tháng là với lãi suất '+laisuat + '% là' + sono)
 
+</script>
 </body>
 </html>
