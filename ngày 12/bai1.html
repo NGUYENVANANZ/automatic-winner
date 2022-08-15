@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhapso">
+<button onclick="btnadd()">add</button>
+<button onclick="btndisplay()"> display</button>
+<p id="result"></p>
+<script>
+    let x= 0;
+    let array = Array();
+    function btnadd(){
+      array[x]=document.getElementById('nhapso').value ;
+        alert("Element: " + array[x] + " Added at index " + x);
+        x++;
+        document.getElementById("nhapso").value = "";
+    }
+    function btndisplay(){
+        let e = ""
+        for (let i = 0; i < array.length; i++) {
+            e += "Element " + i + " = " + array[i] + "<br/>";
+        }
+        document.getElementById("result").innerHTML = e;
+
+    }
+</script>
+</body>
+</html>
