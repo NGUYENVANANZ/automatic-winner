@@ -6,15 +6,21 @@
 </head>
 <body>
 <script>
-  let a = 3;
+  let a = 5;
   let b = [];
   let c ="V"
   for (let i = 0; i< a; i++) {
     b[i] =(prompt("nhập số bất kì"));
   }
-  if (b.indexOf(c) !== -1){
-
+  let vitri = b.indexOf(c)
+  if ( vitri!== -1){
+      for (let j = vitri; j < a-1; j++){
+          b[j]=b[j+1] ;
+      }
+      b[a-1] = ""
   }
+  document.write(b)
+
 </script>
 </body>
 </html>
