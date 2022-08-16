@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    input{
+      width: 200px;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+<h2> Type anthing slowly</h2>
+<input onkeydown="nhaptu()" id="result">
+<script>
+  let arr = "Hôm nay stress quá!" ;
+  let input = document.getElementById("result");
+  let count = 0;
+  function nhaptu(){
+    let str = ""
+    for (let i = 0; i<= count; i++){
+      str += arr[i];
+    }
+    input.value = str ;
+    count++
+    if( count === arr.length){
+      count=0
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhap">
+<input type="button" onclick="timkiem()" value="Tìm kiếm">
+<p id="result"></p>
+<script>
+let a = ["apple","banana"];
+let b = ["táo"," chuối"];
+function timkiem() {
+   let tucantim =  document.getElementById('nhap').value ;
+   let vitri = a.indexOf(tucantim)
+    let vitrihai = b.indexOf(tucantim)
+   if ( vitri === -1 ){
+       if (vitrihai === -1){
+           document.getElementById('result').innerText = " không tồn tại" ;
+
+       } else {
+           document.getElementById('result').innerText = a[vitrihai]
+       }
+   } else {
+       document.getElementById('result').innerText = b[vitri]
+   }
+
+}
+</script>
+</body>
+</html>

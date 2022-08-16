@@ -13,7 +13,7 @@
     let bang = [];
     let OX = ""
     for (let i = 0; i < 5; i++){
-        bang[i]=[ 0,0,0,0,0]
+        bang[i]=['(.)','(.)','(.)','(.)','(.)']
     }
     for (let i = 0; i <5 ; i++ ){
         OX += "<br/>";
@@ -21,20 +21,39 @@
             OX += bang[i][j] + "&nbsp;&nbsp;";
         }
     }
-    // OX += "<br/><br/>"
     a.innerHTML = OX;
+    let check = 1
     function caro() {
         OX = ""
         let x = prompt("X: ");
         let y = prompt("Y: ");
-        bang[x][y] = "x";
+        // đánh OX
+        if (check === 1){
+            bang[x][y] = "x";
+            check = 0
+        } else {
+            bang[x][y] = "o";
+            check = 1
+        }
         for (let i = 0; i < 5; i++) {
             OX += "<br/>";
             for (let j = 0; j < 5; j++) {
                 OX += bang[i][j] + "&nbsp;&nbsp;";
             }
-
         }a.innerHTML = OX;
+
+// xử lí thắng thua
+        for(let i=0; i<5; i++){
+            for (let j=0; j<5; j++) {
+                if (bang[i][j] === 'x' && bang[i][j+1] === 'x' && bang[i][j+2] === 'x' ||
+                    bang[i][j] === 'x' && bang[i+1][j] === 'x' && bang[i+2][j] === 'x'){
+                    alert("x win")
+                } else if (bang[i][j] === 'o' && bang[i][j+1] === 'o' && bang[i][j+2] === 'o' ||
+                    bang[i][j] === 'o' && bang[i+1][j] === 'o' && bang[i+2][j] === 'o'){
+                    alert("o win")
+                }
+            }
+        }
     }
 
 

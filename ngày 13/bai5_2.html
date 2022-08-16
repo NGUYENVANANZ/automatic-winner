@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a = 10;
+  let b = [];
+  for (let i = 0; i< a; i++) {
+    b[i] = parseInt(prompt("nhập số bất kì"));
+
+  }
+  let max = b[0];
+  let vitri = 0;
+  for (let i = 0; i < a; i++) {
+    if (max < b[i]) {
+      max = b[i];
+      vitri = i
+    }
+  }
+    alert(" số lớn nhất là số:"+ max + " ở v trí thứ"+ vitri)
+
+</script>
+
+
+</body>
+</html>
