@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3> Add New Product</h3>
+<input type="text" placeholder="New Product" id="nhap">
+<button onclick="add(mathang)" >Add</button>
+<h3>Display All Product</h3>
+<h5>Product Name</h5>
+<p id="ds"><br></p>
+<button type="button" onclick="edit(mathang)">Sửa</button>
+<button type="button" onclick="xoa(mathang)">Xóa</button>
+<br>
+<script>
+    let mathang =[];
+    function hienthi(mathang){
+        var s="";
+        for (var i=0;i<mathang.length;i++){
+            s=s+(i+1)+". "+mathang[i]+"<br>";
+        }
+        return s;
+    }
+
+  function add(mathang) {
+      let tensanpham = document.getElementById("nhap").value;
+      mathang.push(tensanpham);
+      document.getElementById("nhap").value = ""
+      document.getElementById("ds").innerHTML = hienthi(mathang) ;
+  }
+  function edit(mathang){
+        let sua = +prompt("Thứ tự món muốn thay đổi");
+        let newmathang = prompt("Mặt hàng mới");
+      mathang[sua - 1] = newmathang;
+      document.getElementById("ds").innerHTML = hienthi(mathang) ;
+  }
+  function xoa(mathang){
+        let xoa = +prompt("Thứ tự món muốn xóa");
+      mathang.splice(xoa-1,1);
+      document.getElementById("ds").innerHTML = hienthi(mathang) ;
+
+  }
+</script>
+</body>
+</html>

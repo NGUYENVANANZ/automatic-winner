@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPalindrome(mang){
+        let check = true
+        for (let i = 0; i < mang.length/2; i++){
+            if (mang[i] != mang[mang.length-i-1]){
+                check = false;
+            }
+        }
+        return check;
+    }
+    let mang = prompt("nhập mảng");
+    let doixung = isPalindrome(mang);
+    alert(doixung);
+</script>
+</body>
+</html>

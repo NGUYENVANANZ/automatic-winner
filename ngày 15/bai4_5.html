@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function kiemtramin(a,b,c){
+    let min =a
+    if (min){
+      min = b ;
+      if (min >c){
+          min = c;
+      }
+    }
+    return min
+  }
+  let a =+prompt("Nhập vào số: ");
+  let b =+prompt("Nhập vào số: ");
+  let c =+prompt("Nhập vào số: ");
+  let minabc = kiemtramin(a,b,c);
+  alert("Số nhỏ nhất là : "+ minabc)
+</script>
+
+</body>
+</html>

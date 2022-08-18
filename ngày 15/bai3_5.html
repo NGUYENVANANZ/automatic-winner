@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhap"/>
+<input type="button" onclick="nhap()" value="Tìm kiêm">
+<p id="xuat"></p>
+<script>
+    let check = 0;
+    let KQ = "";
+    let mang1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let mang2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+  function nhap() {
+      let x = document.getElementById("nhap").value;
+      for (let i = 0; i < mang1.length; i++) {
+          if (x === mang1[i]) {
+              for (let j = 0; j < mang2.length; j++) {
+                  if (j === i) {
+                      KQ += mang2[j];
+                      check = 1;
+                      break;
+                  }
+              }
+          }
+      }
+
+      if( check === 0){
+          console.log('k thay');
+          document.getElementById("xuat").innerText = "khong tim thay";
+      }else {
+          document.getElementById("xuat").innerText = KQ;
+          console.log(KQ);
+      }
+  }
+
+</script>
+
+</body>
+</html>

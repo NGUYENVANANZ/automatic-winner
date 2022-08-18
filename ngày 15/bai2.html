@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function xmeter(foot){
+    let  meter = 0.305 * foot
+    return meter
+  }
+  let foot = prompt("nhập mét")
+  let x = xmeter(foot);
+  document.write( foot+ " bằng " + x + " mét" +"<br>")
+  function  xfoot(meter){
+      let  foot = 3.279 * meter
+      return foot
+  }
+  let meter = prompt("nhập feet")
+  let y = xfoot(meter)
+  document.write(meter + " bằng " + y + " feet")
+</script>
+</body>
+</html>

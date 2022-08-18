@@ -6,7 +6,9 @@
 </head>
 <body>
 <h2>Chuyển đổi nhiệt độ</h2>
-Độ F: <input type="text" id="doF" onchange="chuyendoi(value)">
+Độ F: <input type="number" id="doF"
+             onchange="chuyendoi(value)"
+             oninput="chuyendoi(value)">
 <br>
 Độ C: <p id="doC"></p>
 <script>

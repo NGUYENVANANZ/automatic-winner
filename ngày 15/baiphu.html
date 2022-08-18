@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr = prompt("nhập mảng:");
+  function xoa(index){
+    let x = [];
+    for ( let i = 0; i < arr.length; i++){
+
+      if ( i !== index){
+          x.push(arr[i])
+      }
+    }
+    return x
+  }
+  let socanxoa = +prompt("")
+  let mang = xoa(socanxoa)
+  console.log(mang)
+
+</script>
+
+</body>
+</html>
