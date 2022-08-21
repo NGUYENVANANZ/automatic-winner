@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    table{
+      border-spacing: 0px;
+      border-collapse: collapse;
+      border: none;
+    }
+    button{
+      width: 40px;
+      height: 25px;
+    }
+    input{
+      width: 290px;
+      text-align: right;
+    }
+    .cnn{
+      border: none;
+      background: #c6c6c9;
+    }
+    .cnn1{
+      border: none;
+      background: dodgerblue;
+      color: white;
+    }
+    .so{
+      background: #e9ebec;
+      border: none;
+    }
+
+  </style>
+
+</head>
+<body>
+<table >
+  <tr class="man-hinh">
+    <td colspan="8">
+      <input class="boxhienthi" id="hien_thi" placeholder="0">
+    </td>
+
+  <tr>
+    <td> <button onclick="chucnang()" class="cnn">Rad</button></td>
+    <td></td>
+    <td><button onclick="chucnang()" class="cnn">x!</button></td>
+    <td><button onclick="chucnang('(')" class="cnn">(</button></td>
+    <td><button onclick="chucnang(')')" class="cnn">)</button></td>
+    <td><button onclick="chucnang('%')" class="cnn">%</button></td>
+    <td><button onclick="xoa()" class="cnn">AC</button></td>
+  </tr>
+  <tr>
+    <td><button onclick="chucnang()" class="cnn" >Inv</button></td>
+    <td><button onclick="chucnang()" class="cnn">sin</button></td>
+    <td><button onclick="chucnang()" class="cnn">ln</button></td>
+    <td><button onclick="nhapso(7)" class="so">7</button></td>
+    <td><button onclick="nhapso(8)" class="so">8</button></td>
+    <td><button onclick="nhapso(9)" class="so">9</button></td>
+    <td><button onclick="chucnang('/')" class="cnn">/</button></td>
+  </tr>
+  <tr>
+    <td><button onclick="chucnang()" class="cnn">π</button></td>
+    <td><button onclick="chucnang()" class="cnn">cos</button></td>
+    <td><button onclick="chucnang()" class="cnn">log</button></td>
+    <td><button onclick="nhapso(4)" class="so">4</button></td>
+    <td><button onclick="nhapso(5)" class="so">5</button></td>
+    <td><button onclick="nhapso(6)" class="so">6</button></td>
+    <td><button onclick="chucnang('*')" class="cnn">x</button></td>
+  </tr>
+  <tr>
+    <td><button onclick="chucnang('')" class="cnn">e</button></td>
+    <td><button onclick="chucnang('')" class="cnn">tan</button></td>
+    <td><button onclick="chucnang('')" class="cnn">√ </button></td>
+    <td><button onclick="nhapso(1)" class="so">1</button></td>
+    <td><button onclick="nhapso(2)" class="so">2</button></td>
+    <td><button onclick="nhapso(3)" class="so">3</button></td>
+    <td><button onclick="chucnang('-')" class="cnn">-</button></td>
+  </tr>
+  <tr>
+    <td><button onclick="chucnang('Ans')" class="cnn">Ans</button></td>
+    <td><button onclick="chucnang('EXP')" class="cnn">EXP</button></td>
+    <td><button onclick="chucnang('')" class="cnn">x<sup>y</sup></button></td>
+    <td><button onclick="nhapso(0)" class="so">0</button></td>
+    <td><button onclick="nhapso('.')" class="so">.</button></td>
+    <td><button onclick="ketqua()" class="cnn1">=</button></td>
+    <td><button onclick="chucnang('+')" class="cnn">+</button></td>
+  </tr>
+</table>
+<script src="casio_Ontap.js" >
+
+</script>
+
+</body>
+</html>
