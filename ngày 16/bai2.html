@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let hinhtron = function (bankinh){
+        this.bankinh = bankinh;
+        this.getRadius = function() {
+            return this.bankinh;
+        }
+        this.getArea = function() {
+            return Math.PI * this.bankinh * this.bankinh;
+        }
+    }
+    let Hinhtron = new hinhtron(2);
+    let bankinh = Hinhtron.getRadius();
+    let dientich = Hinhtron.getArea();
+    alert("bán kính "+bankinh+" diện tích "+ dientich)
+</script>
+
+</body>
+</html>

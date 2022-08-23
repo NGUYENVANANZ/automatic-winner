@@ -3,39 +3,45 @@ let canvas= document.getElementById('gamezone');
 let context= canvas.getContext('2d');
 
 
-let birdimg= new Image();
-let hinhnenchinh=new Image();
-let ongtren= new Image();
-let ongduoi=new Image();
-// gắn ảnh
-birdimg.src="bird.png";
-hinhnenchinh.src="nenchinh.png";
-ongtren.src="ongtren.png";
-ongduoi.src="ongduoi.png";
-// vị trí khởi đầu của chim
-let bird={
-    x: hinhnenchinh.width/5,
-    y: hinhnenchinh.height/4
-}
-
 // khai báo biến điểm và khoảng cách các ống
 let score=0;
 let khoangcachhaiong=120;
 let khoangcachdenongduoi;
 
+let birdimg= new Image();
+let hinhnenchinh=new Image();
+let ongtren= new Image();
+let ongduoi=new Image();
+let bird
+let ong=[];
+
+function init(){
+    // gắn ảnh
+    birdimg.src="bird.png";
+    hinhnenchinh.src="nenchinh.png";
+    ongtren.src="ongtren.png";
+    ongduoi.src="ongduoi.png";
+// vị trí khởi đầu của chim
+    bird={
+        x:180,
+        y: 150
+    }
 
 // khai báo mảng ống
-let ong=[];
-ong[0]={
-    x:canvas.width,
-    y:0
+    ong[0]={
+        x:canvas.width,
+        y:0
+    }
 }
+
 function run(){
 
     // vẽ nền
     context.drawImage(hinhnenchinh,0,0);
     // vị trí chim
+
     context.drawImage(birdimg,bird.x,bird.y);
+
     for(let i=0;i<ong.length;i++){
         khoangcachdenongduoi=ongtren.height+khoangcachhaiong*1.5;
         context.drawImage(ongtren,ong[i].x,ong[i].y);
@@ -61,6 +67,9 @@ function run(){
             // khi chim cao hơn ống hoặc thấp hơn ống
             (bird.y + birdimg.height <=ong[i].y+ongtren.height|| bird.y +birdimg.height>= ong[i].y+ khoangcachdenongduoi)
         ){
+            document.getElementById("thua").innerHTML = "<div>"+"Bạn đã thua"+"</div>"+
+               "<div>"+"Score:"+score + "</div>" +
+                "<div>"+"<button onclick='reset()'>Reset</button>"+"</div>"
 
             return;
         }
@@ -86,5 +95,8 @@ document.addEventListener("keydown",function(evt){
     //         break;
     // }
 })
-
+function reset(){
+    location.reload()
+}
+init();
 run();

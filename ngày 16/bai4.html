@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="DemoCanvas" width="150" height="50"></canvas>
+<script>
+    let canvas = document.getElementById("DemoCanvas");
+
+    function myRectangle(width, height) {
+        this.width = width;
+        this.height = height;
+        this.getWidth = function (){
+            return this.width;
+        }
+        this.getHeight = function (){
+            return this.height
+        }
+        this.getArea = function (){
+            return this.width * this.height;
+        }
+
+    }
+    let Rectangle = new myRectangle(150,50);
+    let width = Rectangle.getWidth();
+    let height = Rectangle.getHeight();
+    let ctx = canvas.getContext('2d');
+    document.write(Rectangle.getArea());
+    ctx.fillStyle='black';
+    ctx.fillRect(10, 10, width, height)
+
+</script>
+</body>
+</html>

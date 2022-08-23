@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function nhietdo(x){
+    this.doC = x ;
+    this.getDoF = function (){
+      return 9/5 * this.doC + 32;
+    }
+    this.getDoK = function (){
+      return this.doC + 273.15
+    }
+  }
+  let Do = new nhietdo(prompt("nhiệt độ hiện tại (c): "));
+  let DoF = Do.getDoF();
+  let DoK = Do.getDoK();
+  document.write("Nhiệt độ K:" + DoK + "<br>"+ "Nhiệt độ F:" + DoF)
+</script>
+
+</body>
+</html>

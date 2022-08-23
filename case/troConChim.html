@@ -6,14 +6,27 @@
     <style>
         body{
             background-image: url("anhnen.jpg");
-            background-repeat: no-repeat;
             background-size: cover;
+        }
+        #thua{
+            background: black;
+            width: 300px;
+            position: relative;
+            top:-300px;
+            align-content: center;
+            color: white;
         }
     </style>
 </head>
 <body>
-<canvas id="gamezone" width="900" height="500"></canvas>
-<h1 id="scoreshow">score : 0</h1>
+<div align="center">
+    <canvas id="gamezone" width="900" height="500"></canvas>
+    <h1 id="scoreshow">score : 0</h1>
+    <div id="thua"></div>
+
+</div>
+
+
 <script  src="troConChim.js"></script>
 </body>
 </html>
