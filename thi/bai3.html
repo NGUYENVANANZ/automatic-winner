@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+let x = +parseInt(prompt("Number: "));
+let sum = 0;
+  function sumOfListPrime(x) {
+    let check = true;
+    for (let i = 2; i < x; i++) {
+      if (x%i === 0){
+        check = false;
+        break;
+      }
+    }
+    return check;
+  }
+  for (let j = 0; j <= x; j++){
+    if (sumOfListPrime(j) === true ){
+      sum += j;
+    }
+  }
+  sum = sum - 1;
+  document.write(" Sum = "+ sum);
+</script>
+
+</body>
+</html>

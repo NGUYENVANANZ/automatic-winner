@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+  let soDiemThi = +prompt(" Number of elements in array : ");
+  let arr =[];
+  for (let i = 0; i< soDiemThi; i++) {
+      arr[i] = +prompt("Test score: ");
+  }
+  function findAvg(arr){
+      let sum = 0
+     let dtb ;
+      let x = arr
+    for (let i = 0; i< x.length; i++){
+      sum += x[i];
+    }
+    dtb = sum/x.length;
+    return dtb
+  }
+  document.write("Test score:"+ arr + " Medium score : " + findAvg(arr));
+</script>
+
+</body>
+</html>

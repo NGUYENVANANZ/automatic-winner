@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+    <style>
+        body{
+            background: black;
+        }
+    </style>
+</head>
+<body>
+<canvas id="Rectangle" width="1000px" height="1000px">
+</canvas>
+<script>
+    let canvas = document.getElementById("Rectangle");
+    let ctx = canvas.getContext("2d");
+    class myRectangle {
+        width;
+        height;
+        x;
+        y;
+        color;
+        constructor (width,height,x,y,color) {
+            this.width = width;
+            this.height = height;
+            this.x =x ;
+            this.y = y
+            this.color = color
+        }
+
+        getWidth() {
+            return this.width;
+        }
+        getHeight() {
+            return this.height
+        }
+        getX() {
+            return this.x;
+        }
+        getY() {
+            return this.y;
+        }
+        getColor() {
+            return this.color;
+        }
+    }
+    let width_ = +prompt("width");
+    let height_ = +prompt("height")
+    let Rectangle = new myRectangle(width_, height_, 10, 10, '#ff0000' );
+    let width = Rectangle.getWidth()
+    let height = Rectangle.getHeight()
+    let x = Rectangle.getX()
+    let y = Rectangle.getY()
+    let color = Rectangle.getColor()
+    ctx.fillStyle = color ;
+    ctx.fillRect(x, y, width, height);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+  let SoPhanTu = +parseInt(prompt("Array length: "));
+  function insertNumberToArray(x, index){
+    let arr = [];
+    for (let i = 0; i< SoPhanTu; i++){
+      arr[i] = +parseInt(prompt("Enter integer: "));
+      if (index > 0 && index < SoPhanTu){
+          if(index === i){
+              arr[i]= x ;
+          }
+      }
+    }
+    return arr
+  }
+  let viTri = +parseInt(prompt("Location: "));
+  let so_TThe = +parseInt(prompt("Number: "));
+  let Result = insertNumberToArray(so_TThe, viTri);
+  document.write("Result: "+Result)
+</script>
+</body>
+</html>

@@ -1,3 +1,6 @@
+const gameoverado = new Audio("gameover.mp4");
+const playado = new Audio("playgame.mp4");
+
 
 let canvas= document.getElementById('gamezone');
 let context= canvas.getContext('2d');
@@ -5,7 +8,7 @@ let context= canvas.getContext('2d');
 
 // khai báo biến điểm và khoảng cách các ống
 let score=0;
-let khoangcachhaiong=120;
+let khoangcachhaiong=160;
 let khoangcachdenongduoi;
 
 let birdimg= new Image();
@@ -35,7 +38,7 @@ function init(){
 }
 
 function run(){
-
+    playado.play()
     // vẽ nền
     context.drawImage(hinhnenchinh,0,0);
     // vị trí chim
@@ -43,7 +46,7 @@ function run(){
     context.drawImage(birdimg,bird.x,bird.y);
 
     for(let i=0;i<ong.length;i++){
-        khoangcachdenongduoi=ongtren.height+khoangcachhaiong*1.5;
+        khoangcachdenongduoi=ongtren.height+ khoangcachhaiong;
         context.drawImage(ongtren,ong[i].x,ong[i].y);
         context.drawImage(ongduoi,ong[i].x,ong[i].y+khoangcachdenongduoi);
         // tốc độ ống di chuyển
@@ -67,6 +70,8 @@ function run(){
             // khi chim cao hơn ống hoặc thấp hơn ống
             (bird.y + birdimg.height <=ong[i].y+ongtren.height|| bird.y +birdimg.height>= ong[i].y+ khoangcachdenongduoi)
         ){
+            playado.pause()
+            gameoverado.play()
             document.getElementById("thua").innerHTML = "<div>"+"Bạn đã thua"+"</div>"+
                "<div>"+"Score:"+score + "</div>" +
                 "<div>"+"<button onclick='reset()'>Reset</button>"+"</div>"
