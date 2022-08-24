@@ -6,23 +6,37 @@
 </head>
 <body>
 <script>
-  let SoPhanTu = +parseInt(prompt("Array length: "));
-  function insertNumberToArray(x, index){
-    let arr = [];
-    for (let i = 0; i< SoPhanTu; i++){
-      arr[i] = +parseInt(prompt("Enter integer: "));
-      if (index > 0 && index < SoPhanTu){
-          if(index === i){
-              arr[i]= x ;
-          }
+    let arr= [];
+    let SoPhanTu = +parseInt(prompt("Array length: "));
+    let viTri = +parseInt(prompt("Location: "));
+    let so_TThe = +parseInt(prompt("Number: "));
+
+    function insertNumberToArray(arr, x, index){
+        for (let i = 0; i< SoPhanTu; i++) {
+            arr[i] = +prompt("Enter integer: ");
+        }
+        if (index < 0 || index > arr.length) {
+          return arr;
       }
+
+      let arrNew = new Array(arr.length+1);
+      for (let i = 0; i < arr.length+1; i++ ){
+              if(index > i){
+                 arrNew[i]= arr[i];
+              } else if(index === i){
+                  arrNew[i] = x
+              } else {
+                  arrNew[i] = arr[i-1]
+
+              }
     }
-    return arr
+        return  arrNew;
+
   }
-  let viTri = +parseInt(prompt("Location: "));
-  let so_TThe = +parseInt(prompt("Number: "));
-  let Result = insertNumberToArray(so_TThe, viTri);
-  document.write("Result: "+Result)
+
+    let Result = insertNumberToArray(arr, so_TThe, viTri);
+    document.write("Result: "+Result)
+
 </script>
 </body>
 </html>
