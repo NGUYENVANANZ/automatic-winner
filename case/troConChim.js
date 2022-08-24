@@ -74,14 +74,14 @@ function run(){
             gameoverado.play()
             document.getElementById("thua").innerHTML = "<div>"+"Bạn đã thua"+"</div>"+
                "<div>"+"Score:"+score + "</div>" +
-                "<div>"+"<button onclick='reset()'>Reset</button>"+"</div>"
+                "<div>"+"<button style=' color: darkred; background: khaki;' onclick='reset()'>Reset</button>"+"</div>"
 
             return;
         }
 
     }
     // hiện điểm
-    document.getElementById("scoreshow").innerHTML = " score : "+ score;
+    document.getElementById("scoreshow").innerHTML = " Score : "+ score;
     // chim rơi
     bird.y+=1;
     requestAnimationFrame(run);

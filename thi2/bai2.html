@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr = [];
+  let n = +prompt("Số phần tử trong mảng: ");
+  for (let i = 0; i < n; i++){
+    arr[i] = +prompt("Nhập phần tử");
+  }
+  let index = +prompt("vị trí cần xóa");
+  function tryRemoveFromArray(arr, index) {
+    if ( index <0 || index > arr.length){
+        return arr
+    }
+    let arrNew = new Array(arr.length-1)
+      for (let i = 0; i < arrNew.length; i++){
+          if (i < index){
+              arrNew[i]= arr[i]
+          }else{
+              arrNew[i] = arr[i+1]
+          }
+      }
+      return  arrNew
+  }
+  document.write("Phần tử trong mảng:" + tryRemoveFromArray(arr, index) )
+</script>
+</body>
+</html>

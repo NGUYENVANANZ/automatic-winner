@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr2 = "không xong việc không về";
+  let arr1 = "xong";
+
+  function Text(arr1, arr2) {
+ let check = false
+      for (let i = 0; i < arr2.length; i++){
+          if (arr1[0] === arr2[i]){
+              check = true;
+              for (let j = 0; j < arr1.length; j++){
+                  if (arr1[j] !== arr2[i + j]){
+                      check = false;
+                      break;
+                  }
+              }
+          }
+      }
+    return check
+  }
+  alert(Text(arr1, arr2));
+</script>
+
+</body>
+</html>

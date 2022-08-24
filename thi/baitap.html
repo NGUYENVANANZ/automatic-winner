@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Nhan_Vien{
+        ten;
+        tuoi;
+        gioitinh;
+        luong;
+        constructor(ten,tuoi, gioitinh, luong ) {
+            this.ten = ten
+            this.tuoi =tuoi
+            this.gioitinh = gioitinh
+            this.luong = luong
+        }
+        ketqua(){
+            document.write(this.ten + this.tuoi + this.gioitinh + this.luong)
+        }
+    }
+    let result = new Nhan_Vien('Vân ',17, ' Nam ', 5000000);
+    result.ketqua()
+</script>
+
+</body>
+</html>
