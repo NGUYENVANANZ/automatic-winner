@@ -53,7 +53,6 @@ function run() {
         // xóa ống
         if (ong[i].x + ongtren.width === 0) {
             ong.splice(0, 1);
-            console.log("xoa")
         }
         // cộng điểm
         if (bird.x === ong[i].x) {
@@ -69,7 +68,7 @@ function run() {
             play.pause()
             gameOver.play()
             document.getElementById("score").innerHTML = score;
-            document.getElementById("thua").hidden = false
+            document.getElementById("GamOver").hidden = false
             luuDiem(score)
             return;
         }
