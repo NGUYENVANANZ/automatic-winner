@@ -4,31 +4,50 @@
     <meta charset="UTF-8">
     <title> Flappy Bird </title>
     <style>
-        body{
+        body {
             background-image: url("anhnen.jpg");
             background-size: cover;
         }
-        #thua{
+
+        #GamOver {
             background: black;
             width: 300px;
             position: relative;
-            top:-300px;
+            top: -300px;
             align-content: center;
             color: white;
+            padding: 15px;
+            border-radius: 15px;
         }
-        .information{
+
+        .information {
             border: 1px solid black;
             width: 300px;
-            height: 500px;
+            height: 502px;
             position: absolute;
             left: 10px;
             top: 5px;
             background: lightblue;
+            font-weight: bold;
         }
-        #scoreshow {
+        .xxx{
+            font-weight: bold;
+        }
+
+        #scoreShow {
             color: red;
             text-align: center;
         }
+        .top{
+            border: 1px solid red;
+            text-align: center;
+            font-weight: bold;
+        }
+        .diem{
+            color: red;
+
+        }
+
     </style>
 </head>
 <body>
@@ -37,15 +56,47 @@
         -Khi qua một ống bạn sẽ được một điểm <br>
         -Nếu đụng vào ống hoặc rơi xuống đất bạn sẽ thua <br>
     </p>
-    <h1 id="scoreshow" >Score : 0</h1>
+    <h3 id="scoreShow">Score : 0</h3>
+    <div>
+        <div class="top">
+            Top1:
+            <p id="rank1" class="diem">...</p>
+        </div>
+        <div class="top">
+            Top2: <p id="rank2" class="diem">...</p>
+        </div>
+        <div class="top">
+            Top3:
+            <p id="rank3" class="diem">...</p>
+        </div>
+        <div class="top">
+            Top4:
+            <p id="rank4" class="diem">...</p>
+        </div>
+        <div class="top">
+            Top5:
+            <p id="rank5" class="diem">...</p>
+        </div>
+    </div>
+
+
 </div>
 
 <div align="center">
-    <canvas id="gamezone" width="900" height="500"></canvas>
-    <div id="thua"></div>
+    <canvas id="gameZone" width="900" height="500"></canvas>
+    <div id="GamOver" hidden>
+        <div class="xxx"> Game over</div>
+        <div> Score: </div>
+        <div id="score"></div>
+        <div>
+            <button style=' color: darkred; background: khaki;' onclick='reset()'>Reset</button>
+        </div>
+    </div>
+
+
 </div>
 
 
-<script  src="troConChim.js"></script>
+<script src="troConChim.js"></script>
 </body>
 </html>
