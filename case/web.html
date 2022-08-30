@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+<header class="header">
+    <nav class="nav-items">
+        <div>
+            <input type="text" class="input" placeholder="Tìm kiếm" id="timkiem">
+            <button id="myBtn" class="press" onclick="Search()">Search</button>
+        </div>
+        <a style="cursor: pointer;" onclick="document.getElementById('home').scrollIntoView({ behavior: 'smooth' })">Home</a>
+        <a style="cursor: pointer;" onclick="document.getElementById('wp-products').scrollIntoView({ behavior: 'smooth' })">Products</a>
+        <a style="cursor: pointer;" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Contact</a>
+    </nav>
+</header>
+<main>
+    <div  id ="home" class="intro">
+        <h1>An Nghiện</h1>
+        <p>Chill Quên Lối Về</p>
+    </div>
+    <div id="wp-products">
+        <div class="intro-x">
+            <h2>SẢN PHẨM CỦA CHÚNG TÔI</h2>
+        </div>
+        <div class="grid__column-2">
+            <nav class="category">
+                <h3 class="danhmuc_danhmuc">Danh mục</h3>
+                <ul class="danhmuc-link">
+                    <li class="danhmuc-item">
+                        <input placeholder="Nhập name" id="name">
+                    </li>
+                    <li class="danhmuc-item">
+                        <input placeholder="Nhập image" id="img">
+                    </li>
+                    <li class="danhmuc-item">
+                        <input placeholder="Nhập Price" id="price">
+                    </li>
+                    <li class="danhmuc-item">
+                        <button onclick="create()">Create</button>
+                    </li>
+                </ul>
+            </nav>
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="pTimKiem"></p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+<div class="home-produc">
+    <!--gird => row=> column -->
+    <div class="grid__column-10">
+    <div class="grid__row">
+        <div id="show_x"></div>
+    </div>
+    </div>
+</div>
+</div>
+<div id="contact">
+    <div class="cart">
+        <h1>Danh sách sản phẩm</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>Sản phẩm</th>
+                <th>giá</th>
+                <th>số lượng</th>
+                <th>chọn</th>
+            </tr>
+            </thead>
+            <tbody id="gioHang">
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="web.js"></script>
+</body>
+</html>

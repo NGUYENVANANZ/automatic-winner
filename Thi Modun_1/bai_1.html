@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_1</title>
+</head>
+<body>
+<script>
+  let n = +prompt("số phần tử của mảng");
+  let arr = [];
+  function nhap_Diem(x){
+    for (let i = 0; i < x; i++){
+      arr.push(+prompt("nhập điểm:"))
+    }
+    return arr
+  }
+  function findAvg(arr) {
+    let dtb=0;
+    for (let i = 0; i < arr.length; i++){
+      dtb += arr[i];
+    }
+    return dtb/arr.length;
+  }
+  alert("điểm trung bình là:" + findAvg(nhap_Diem(n)))
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_2</title>
+</head>
+<body>
+<script>
+  let n = +prompt("số phần tử của mảng");
+  let arr = [];
+  for (let i = 0; i < n; i++) {
+    arr.push(+prompt("nhập phần tử của mảng:"));
+  }
+  let index = +prompt("vị trí muốn thay đổi:");
+  let x = +prompt("số muốn thay đổi:");
+
+  function insertNumberToArray(arr,index,x){
+    if (index <0 || index > arr.length){
+      return arr;
+    }
+    let arrNew = new Array(arr.length+1);
+    for( let i = 0; i < arrNew.length; i++){
+      if(index > i){
+        arrNew[i]= arr[i];
+         }else if (index === i){
+            arrNew[i]= x;
+            }else {
+             arrNew[i] = arr[i-1];
+      }
+    }
+    return arrNew;
+  }
+  console.log(insertNumberToArray(arr,index,x))
+</script>
+</body>
+</html>

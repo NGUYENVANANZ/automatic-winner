@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-image: url("https://vtv1.mediacdn.vn/thumb_w/640/2020/5/5/ai-la-trieu-phu-4-15886440502311004481121.jpg");
+            background-size: cover;
+        }
+
+        #question {
+            background-color: powderblue;
+            width: 80%;
+            height: 90px;
+            text-align: center;
+            border-radius: 100px;
+            margin: 100px auto 50px auto;
+            padding: 5px;
+            font-size: 40px;
+        }
+
+        #answer {
+            width: 600px;
+
+
+        }
+
+        button {
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 30px;
+            background-color: white;
+            color: black;
+            border-radius: 80px;
+        }
+
+        button:hover {
+            background-color: limegreen;
+            transform: translateY(-10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+        }
+
+        .an_ {
+            height: 50px;
+            width: 500px;
+            padding: 10px;
+            margin-left: 120px;
+        }
+    </style>
+</head>
+<body><div id="swapper">
+    <div id="questionScreen" class="hide">
+        <div id="question"></div>
+        <div id="answer">
+            <table>
+                <tr>
+                    <td><button id="answer_1" class="an_" onclick="checkAnswer(0)" style="color: red"></button></td>
+                    <td><button id="answer_2" class="an_" onclick="checkAnswer(1)" style="color: red"></button></td>
+                </tr>
+                <tr>
+                    <td><button id="answer_3" class="an_" onclick="checkAnswer(2)" style="color: red"></button></td>
+                    <td><button id="answer_4" class="an_" onclick="checkAnswer(3)" style="color: red"></button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    class Question{
+        content;
+        answer_1;
+        answer_2;
+        answer_3;
+        answer_4;
+        correctAnswer;
+        money;
+        constructor(content, answer_1,answer_2,answer_3,answer_4, correctAnswer, money){
+            this.content = content;             //nội dung
+            this.answer_1 = answer_1;//câu trả lời
+            this.answer_2 = answer_2;
+            this.answer_3 = answer_3;
+            this.answer_4 = answer_4;
+            this.correctAnswer = correctAnswer; //câu trả lời chính xác
+            this.money = money;                 // tiền thưởng
+        }
+    }
+
+    let question1 = new Question("Câu 1: Điền từ còn thiếu vào chỗ trống trong câu: ”Đục nước béo …”? ", "A.Vạc", "B.Cò", "C.Cá", "D.Mèo", 1, "100$");
+    let question2 = new Question("Câu 2: Đội bóng đã từng đoạt nhiều chức vô địch Copa America nhất?","A.Uruguay","B.Brazil","C.Achentina","D.Parguay",2,"200$");
+    let question3 = new Question("Câu 3:Đâu là tên một ngôi chùa nổi tiếng ở Hà Nam?", "A.Bái Đính", "B.Trấn Quốc", "C.Bồ Đà", "D.Tam Chúc", 3, "300$");
+    let question4 = new Question("Câu 4:Sóng biển thường được tạo ra do cái gì?", "A.Nắng", "B.Gió", "C.Mưa", "D.Sương Mù", 1, "400$");
+    let question5 = new Question("Câu 5:Âm thanh có tần số lớn hơn 20KHz gọi là gì?", "A.Siêu âm", "B.Hạ âm", "C.Cận âm", "D.Quá âm", 0, "500$");
+    let question6 = new Question("Câu 6:Tác phẩm nào được coi là tác phẩm nổi tiếng nhất của Hector Malot?", "A.Không gia đình", "B.Đồi gió hú", "C.Giã từ vũ khí", "D.Miếng da lừa", 0, "600$");
+    let question7 = new Question("Câu 7:Đâu là một hợp kim của Nhôm?", "A.Ferit", "B.Đuyra", "C.Alkanoid", "D.Alumin", "B.Đuyra", "700$");
+    let question8 = new Question("Câu 8:Thiên tài Albert Einstein đã từng được mời làm tổng thống của đất nước nào?", "A.Latvia", "B.Bungary", "C.Israel", "D.Jordan", 2, "800$");
+    let question9 = new Question("Câu 9:Bức tượng cao nhất Trung Quốc?", "A.Trung Nguyên Đại Phật", "B.Linh Sơn Đại Phật", "C.Tích Thủy Quan Âm", "D.Lạc Sơn Đại Phật", 0, "900$");
+    let question10 = new Question("Câu 10:Pôn Pốt mở đầu xâm lược biên giới tây nam nước ta vào ngày tháng năm nào?", "A.20/12/1978", "B.21/12/1979", "C.21/12/1978", "D.24/12/1978", 2, "1000$");
+    let question11 = new Question("Câu 11: Trong 4 nguyên tố khí trơ dưới đây, nguyên tố nào có số electron ngoài cùng thấp nhất?", "A.Khí Neon (Ne)", "B.Khí Argon (Ar)", "C. Khí Heli (He)", "D.Khí Kripton", 3, "1200$");
+    let question12 = new Question("Câu 12: Để bảo vệ vỏ tàu biển bằng thép, người ta thường gắn vào vỏ tàu (phần ngâm dưới nước) những tấm kim loại?", "A.Kẽm (Zn)", "B.Đồng (Cu)", "C.Bạc (Ag)", "D.Chì (Pb)", 0, "1400$");
+    let question13 = new Question("Câu 13: Thành nhà Hồ được UNESO công nhận là di sản văn hoá thế giới nằm ở tỉnh nào?", "A.Ninh Bình", "B.Thanh Hoá", "C.Nghệ An", "D.Hà Tĩnh", 1, "1600$");
+    let question14 = new Question("Câu 14: Đại hội thể thao học sinh Đông Nam Á lần thứ 3-2011 diễn ra ở nước nào?", "A.Singapore", "B.Timo Leste", "C.Thái Lan", "D.Malaysia", 1, "1800$");
+    let question15 = new Question("Câu 15:Vườn quốc gia nào hiện không nằm trong danh sách Vườn di sản ASEAN?", "A.Vườn Quốc Gia Kon Ka Kinh", "B.Vườn Quốc Gia Tam Đảo", "C.Vườn Quốc Gia Chư Mom Ray", "D.Vườn Quốc Gia Bái Tử Long", 1, "2000$");
+
+    let question = [question1, question2, question3, question4, question5, question6, question7, question8, question9, question10,question11,question12,question13,question14,question15];
+    let getQuestion = document.getElementById('question');
+    let getDap_an_1 = document.getElementById('answer_1');
+    let getDap_an_2 = document.getElementById('answer_2');
+    let getDap_an_3 = document.getElementById('answer_3');
+    let getDap_an_4 = document.getElementById('answer_4');
+    let index=0;
+    showQuestion();
+
+    // hiện thị câu hỏi
+    function showQuestion() {
+        getQuestion.innerHTML = question[index].content;
+        getDap_an_1.innerHTML = question[index].answer_1
+        getDap_an_2.innerHTML =question[index].answer_2
+        getDap_an_3.innerHTML = question[index].answer_3
+        getDap_an_4.innerHTML= question[index].answer_4
+    }
+    //đúng sai
+    function checkAnswer(id){
+        let check = false;
+            if(id === question[index].correctAnswer){
+                check = true;
+            }
+
+        if(check === true){
+            index++;
+            showQuestion();
+        }
+        else {
+            alert("You lost!")
+        }
+    }
+
+</script>
+
+</body>
+</html>
